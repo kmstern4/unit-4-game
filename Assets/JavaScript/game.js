@@ -26,16 +26,47 @@ var crystals ;
 var targetScoreRandom = Math.floor(Math.random() * 102) + 19;
 
 function startGame() {
+    $(".crystalStyle").remove();
     userScore = 0;
-    targetScoreRandom;
+    // targetScoreRandom;
     crystals = crystalSet();
     for (var key in crystals) {
-        var crystalsDiv = $("<div>").attr("class", "crystalStyle").attr("data-", key);
-        var imageWrite = $("<img>").attr("src", crystals[key].image).attr("worth", crystals[key].worth);
+        var crystalsDiv = $("<div>").attr("class", "crystalStyle").attr("data-crystal", key);
+        var imageWrite = $("<img>").attr("src", crystals[key].image).attr("worth", crystals[key].worth).attr("class", "crystalBtn");
         crystalsDiv.append(imageWrite);
         $(".crystalDiv").append(crystalsDiv);
-        console.log("worth: " + crystals[key].worth)
+        console.log("worth: " + crystals[key].worth);
+    };
+    clickEvent();
+    $("#targetScore").text("Target Score: " + targetScoreRandom);
+    $("#currentScore").text("Your Score: " + userScore);
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
+};
+
+function clickEvent() {
+    $(".crystalBtn").on("click", function () {
+    console.log(this);
+    console.log($(this).attr("worth"));
+    //add worth to userScore
+    //write new userScore
+    var numWorth = parseInt($(this).attr("worth"));
+    console.log(numWorth);
+    console.log(userScore);
+    userScore = userScore + numWorth;
+    console.log(userScore);
+    $("#currentScore").text("Your Score: " + userScore);
+    if (userScore > targetScoreRandom) {
+        alert("You lose");
+        losses++;
+        startGame();
+    };
+    if (userScore == targetScoreRandom) {
+        alert("you win");
+        wins++
+        startGame();
     }
+    })
 };
 
 startGame();
