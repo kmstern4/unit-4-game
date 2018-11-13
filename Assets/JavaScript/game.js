@@ -38,10 +38,10 @@ function startGame() {
         console.log("worth: " + crystals[key].worth);
     };
     clickEvent();
-    $("#targetScore").text("Target Score: " + targetScoreRandom);
-    $("#currentScore").text("Your Score: " + userScore);
-    $("#wins").text("Wins: " + wins);
-    $("#losses").text("Losses: " + losses);
+    $("#targetScore").text(targetScoreRandom);
+    $("#currentScore").text(userScore);
+    $("#wins").text(wins);
+    $("#losses").text(losses);
 };
 
 function clickEvent() {
@@ -53,7 +53,7 @@ function clickEvent() {
     console.log(userScore);
     userScore = userScore + numWorth;
     console.log(userScore);
-    $("#currentScore").text("Your Score: " + userScore);
+    $("#currentScore").text(userScore);
     if (userScore > targetScoreRandom) {
         alert("You lose");
         losses++;
