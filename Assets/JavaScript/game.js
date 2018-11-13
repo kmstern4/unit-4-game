@@ -23,12 +23,12 @@ var userScore = 0;
 var wins = 0;
 var losses = 0;
 var crystals ;
-var targetScoreRandom = Math.floor(Math.random() * 102) + 19;
+var targetScoreRandom;
 
 function startGame() {
     $(".crystalStyle").remove();
     userScore = 0;
-    // targetScoreRandom;
+    targetScoreRandom = Math.floor(Math.random() * 102) + 19;
     crystals = crystalSet();
     for (var key in crystals) {
         var crystalsDiv = $("<div>").attr("class", "crystalStyle").attr("data-crystal", key);
@@ -48,8 +48,6 @@ function clickEvent() {
     $(".crystalBtn").on("click", function () {
     console.log(this);
     console.log($(this).attr("worth"));
-    //add worth to userScore
-    //write new userScore
     var numWorth = parseInt($(this).attr("worth"));
     console.log(numWorth);
     console.log(userScore);

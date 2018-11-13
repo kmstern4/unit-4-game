@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     background: black;
     color: white;
@@ -5,4 +8,43 @@ body {
 
 img {
     float: left;
+}
+
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-family: "Lily Script One", cursive;
+    font-size: 50px;
+}
+
+.container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    background: grey;
+    height: 400px;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+}
+
+.crystalDiv {
+    position: relative;
+    top: 100px;
+    width: 100%;
+}
+
+#targetScore {
+    position: absolute;
+}
+
+#currentScore {
+    position: absolute;
+    left: 30%;
+}
+
+#winsLosses {
+    position: absolute;
+    left: 60%;
 }
