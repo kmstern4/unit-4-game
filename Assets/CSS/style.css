@@ -114,6 +114,9 @@ div[data-crystal="pink"] {
     width: 202px;
 }
 
+.crystalStyle:hover {
+    
+}
 
 #targetScore, #currentScore {
     font-size: 100px;
