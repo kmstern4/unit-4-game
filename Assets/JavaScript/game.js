@@ -35,7 +35,6 @@ function startGame() {
         var imageWrite = $("<img>").attr("src", crystals[key].image).attr("data-worth", crystals[key].worth).attr("class", "crystalBtn");
         crystalsDiv.append(imageWrite);
         $(".crystalDiv").append(crystalsDiv);
-        console.log("data-worth: " + crystals[key].worth);
     };
     clickEvent();
     $("#targetScore").text(targetScoreRandom);
@@ -46,13 +45,8 @@ function startGame() {
 
 function clickEvent() {
     $(".crystalBtn").on("click", function () {
-    console.log(this);
-    console.log($(this).attr("data-worth"));
     var numWorth = parseInt($(this).attr("data-worth"));
-    console.log(numWorth);
-    console.log(userScore);
     userScore = userScore + numWorth;
-    console.log(userScore);
     $("#currentScore").text(userScore);
     if (userScore > targetScoreRandom) {
         alert("You lose");

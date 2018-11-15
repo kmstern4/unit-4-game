@@ -114,10 +114,6 @@ div[data-crystal="pink"] {
     width: 202px;
 }
 
-.crystalStyle:hover {
-    
-}
-
 #targetScore, #currentScore {
     font-size: 100px;
     font-family: "Lily Script One", cursive;
@@ -129,42 +125,3 @@ div[data-crystal="pink"] {
     font-family: "Lily Script One", cursive;
     font-size: 23px;
 }
-
-/* .container {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    background: grey;
-    height: 400px;
-    font-family: "Roboto", sans-serif;
-    padding: 30px 20px 30px 20px;
-}
-
-.numbersDiv {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.crystalDiv {
-    text-align: center;
-    width: 100%;
-}
-
-#targetStyle, #currentStyle {
-    text-align: center;
-    width: 35%;
-    display: inline-block;
-}
-
-#winsLosses {
-    text-align: left;
-    width: 10%;
-    display: inline-block;
-}
-
-.crystalStyle {
-    display: inline-block;
-    width: 25%;
-}
-
